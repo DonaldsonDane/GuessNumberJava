@@ -1,4 +1,4 @@
-import java.text.MessageFormat;
+
 import java.util.Random;
 import java.util.Scanner;  // Import the Scanner class
 
@@ -35,6 +35,7 @@ public class Main {
        BeginGame();
 
     }
+
 
     public static void RetrieveName(Boolean nameRetrieved)
     {
@@ -99,6 +100,11 @@ public class Main {
                 GrabUserGuess(correctNumber);
             }else{
                 System.out.println("GAME OVER! You ran out of lives.");
+                System.out.println("Press 'Enter' to try again...");
+                Scanner redo = new Scanner(System.in);  // Create a Scanner object
+               if(redo.hasNextLine()){
+                   BeginGame();
+               }
             }
 
 
